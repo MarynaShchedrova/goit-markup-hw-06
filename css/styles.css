@@ -765,9 +765,9 @@ body {
   background-position: center;
   background-size: 16px 16px;
 }
-/* .modal-form-check:focus + .modal-form-check-desc::before {
-  outline: 1.25px solid rgba(64, 75, 191, 1);
-} */
+.modal-form-check:focus + .modal-form-check-desc::before {
+  border: 1.25px solid rgba(64, 75, 191, 1);
+}
 .modal-form-check-desc {
   display: flex;
   align-items: center;
