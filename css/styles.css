@@ -53,6 +53,10 @@ body {
   padding-top: 120px;
   padding-bottom: 120px;
 }
+.section-portfolio {
+  padding-top: 96px;
+  padding-bottom: 120px;
+}
 .services {
   padding-bottom: 120px;
 }
@@ -81,10 +85,12 @@ body {
 .page-header {
   border-bottom: 1px solid #e7e9fc;
 }
-.active {
+.menu-link.active {
   position: relative;
+  color: var(--ocean-color);
 }
 .active::after {
+  color: var(--ocean-color);
   display: block;
   content: '';
   width: 100%;
@@ -321,6 +327,7 @@ body {
   color: #434455;
 }
 .advance-content {
+  border-radius: 4px;
   width: 264px;
   height: 112px;
   background-color: #f4f4fd;
@@ -400,7 +407,7 @@ body {
   /* flex-basis: calc((100%-40px) / 3); */
 }
 .card-item {
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .card-item:hover {
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
@@ -535,7 +542,65 @@ body {
 .logo-color {
   color: #ffffff;
 }
+.subscribe {
+  color: var(--primary-white-color);
+  line-height: 1.5;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.footer-subscribe {
+  padding-left: 80px;
+}
+.footer-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-input {
+  width: 264px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding-left: 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-color: rgba(33, 150, 243, 0);
+  box-shadow: rgba(0, 0, 0, 0.15);
+}
+.footer-input:hover,
+.footer-input:focus {
+  border-color: var(--accent-color);
+}
+.footer-submit {
+  position: relative;
+}
+.footer-submit-button {
+  color: var(--primary-text-color-thema-dark);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  width: 165px;
+  height: 40px;
+  justify-content: left;
+  align-items: flex-start;
+  background: var(--iric-color);
+  border-radius: 4px;
+  border-color: var(--iric-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.footer-submit-icon {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+}
+.footer-submit-button:hover,
+.footer-submit-button:focus {
+  background-color: #404bbf;
+}
 /* ======Modal====== */
 .backdrop {
   position: fixed;
@@ -600,7 +665,7 @@ body {
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 .modal-form {
   display: flex;
@@ -620,6 +685,7 @@ body {
   line-height: 1.17;
   letter-spacing: 0.01em;
   margin-bottom: 4px;
+  font-size: 12px;
 }
 .modal-form-field {
   margin-bottom: 8px;
@@ -652,6 +718,10 @@ body {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  font-weight: 400;
 }
 .modal-form-message::placeholder {
   font-size: 12px;
@@ -661,20 +731,39 @@ body {
   outline: none;
   border-color: rgba(77, 90, 229, 1);
 }
+.modal-form-check-desc {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #757575;
+}
+.modal-form-check-desc-link {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;
+  color: var(--iric-color);
+}
+
 .modal-form-check-desc::before {
   display: block;
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
   border: 1.25px solid rgba(46, 47, 66, 1);
   border-radius: 2px;
   content: '';
   cursor: pointer;
   margin-right: 8px;
-  background-image: url(./images/modal/default.svg);
 }
 .modal-form-check:checked + .modal-form-check-desc::before {
-  background-color: var(--ocean-color);
-  background-image: url(./images/modal/click.svg);
+  background-color: rgba(64, 75, 191, 1);
+  border: none;
+  background-image: url(../images/modal/click.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
 }
 /* .modal-form-check:focus + .modal-form-check-desc::before {
   outline: 1.25px solid rgba(64, 75, 191, 1);
@@ -700,6 +789,9 @@ body {
   border-radius: 4px;
   border-color: rgba(77, 90, 229, 1);
   padding: 16px 32px 16px 32px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-submit:hover,
+.modal-form-submit:focus {
+  background-color: #404bbf;
 }
