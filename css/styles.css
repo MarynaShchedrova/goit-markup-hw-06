@@ -549,7 +549,7 @@ body {
   font-weight: 500;
 }
 .footer-subscribe {
-  padding-left: 80px;
+  margin-left: 80px;
 }
 .footer-input::placeholder {
   font-weight: 400;
@@ -561,6 +561,7 @@ body {
 .footer-input {
   width: 264px;
   height: 40px;
+  color: #757575;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 4px;
   padding-left: 16px;
@@ -572,10 +573,12 @@ body {
 .footer-input:focus {
   border-color: var(--accent-color);
 }
-.footer-submit {
-  position: relative;
+.footer-form {
+  display: flex;
 }
 .footer-submit-button {
+  display: flex;
+  margin-left: 24px;
   color: var(--primary-text-color-thema-dark);
   font-weight: 500;
   font-size: 16px;
@@ -583,8 +586,8 @@ body {
   letter-spacing: 0.04em;
   width: 165px;
   height: 40px;
-  justify-content: left;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   background: var(--iric-color);
   border-radius: 4px;
   border-color: var(--iric-color);
@@ -592,10 +595,10 @@ body {
 }
 
 .footer-submit-icon {
-  position: absolute;
-  top: 50%;
-  right: 16px;
-  transform: translateY(-50%);
+  margin-top: 10px;
+  margin-left: 16px;
+  margin-bottom: 10px;
+  /* transform: translateY(-50%); */
 }
 .footer-submit-button:hover,
 .footer-submit-button:focus {
@@ -731,13 +734,7 @@ body {
   outline: none;
   border-color: rgba(77, 90, 229, 1);
 }
-.modal-form-check-desc {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.33;
-  letter-spacing: 0.04em;
-  color: #757575;
-}
+
 .modal-form-check-desc-link {
   font-weight: 400;
   font-size: 12px;
@@ -746,7 +743,17 @@ body {
   text-decoration-line: underline;
   color: var(--iric-color);
 }
-
+.modal-form-check-desc {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: #757575;
+}
 .modal-form-check-desc::before {
   display: block;
   width: 16px;
@@ -756,6 +763,9 @@ body {
   content: '';
   cursor: pointer;
   margin-right: 8px;
+}
+.modal-form-wrrap {
+  margin-bottom: 16px;
 }
 .modal-form-check:checked + .modal-form-check-desc::before {
   background-color: rgba(64, 75, 191, 1);
@@ -768,12 +778,7 @@ body {
 .modal-form-check:focus + .modal-form-check-desc::before {
   border: 1.25px solid rgba(64, 75, 191, 1);
 }
-.modal-form-check-desc {
-  display: flex;
-  align-items: center;
-  font-size: 12px;
-  margin-bottom: 24px;
-}
+
 .modal-form-submit {
   width: 160px;
   height: 56px;
